@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar effect</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a data-page="home" href="#">Home</a></li>
+          <li><a data-page="about" href="#">About</a></li>
+          <li><a data-page="services" href="#">Services</a></li>
+          <li><a data-page="contact" href="#">Contact</a></li>
+          <div class="trans"></div>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section data-index="0" class="home">
+        <img src="img/nyc.jpg" alt="" />
+      </section>
+      <section data-index="1" class="about">
+        <img src="img/shoes.jpg" alt="" />
+      </section>
+      <section data-index="2" class="services">
+        <img src="img/nature-sky.jpg" alt="" />
+      </section>
+      <section data-index="3" class="contact">
+        <img src="img/snow-mountains.jpg" alt="" />
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
