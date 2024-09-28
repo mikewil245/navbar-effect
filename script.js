@@ -19,9 +19,9 @@ function navScroll(entries) {
     const activeLink = document.querySelector(`[data-page="${className}"]`);
     //the elementIndex value will be the target element attribbute from the data-index
     const elementIndex = entry.target.getAttribute("data-index");
-    //get the coordinates from the activeLink
+    //get the coordinates of the current section that we are on.
     const coordinates = activeLink.getBoundingClientRect();
-
+//
     const directions = {
       height: coordinates.height,
       width: coordinates.width,
@@ -29,13 +29,25 @@ function navScroll(entries) {
       left: coordinates.left,
     };
 
-    if (entry.isIntersecting) {
-      trans.style.setProperty("height", `${directions.height}px`);
-      trans.style.setProperty("width", `${directions.width}px`);
-      trans.style.setProperty("top", `${directions.top}px`);
-      trans.style.setProperty("left", `${directions.left}px`);
-      trans.style.backgroundColor = gradient[elementIndex];
-    }
+   if (entry.isIntersecting) {
+  // When the section is visible in the viewport:
+  
+  // Set the height of the 'trans' element to match the height of the active navigation link
+  trans.style.setProperty("height", `${directions.height}px`);
+  
+  // Set the width of the 'trans' element to match the width of the active navigation link
+  trans.style.setProperty("width", `${directions.width}px`);
+  
+  // Position the 'trans' element to align with the top of the active navigation link
+  trans.style.setProperty("top", `${directions.top}px`);
+  
+  // Position the 'trans' element to align with the left edge of the active navigation link
+  trans.style.setProperty("left", `${directions.left}px`);
+  
+  // Change the background color of the 'trans' element based on the current section's index
+  trans.style.backgroundColor = gradient[elementIndex];
+}
+
   });
 }
 
